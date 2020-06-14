@@ -1,0 +1,17 @@
+
+c	java:S100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ß€ü
+
+java:S14888"fImmediately return this expression instead of assigning it to the temporary variable "todayFormatted".(æÁ’”ıÿÿÿÿ
+n	java:S116"TRename this field "nome_user" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ìô°ûÿÿÿÿ
+k	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¦Àäÿÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔèØˆüÿÿÿÿ
+h	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¦Àäÿÿÿÿÿ
+c	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷¼¬Á
+K
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ
+e	java:S116"PRename this field "_data" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ìçå
+f	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ß€ü
+g	java:S116"RRename this field "id_user" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†¿ú
+h	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šµı“ùÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¦¹Œşÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔèØˆüÿÿÿÿ
