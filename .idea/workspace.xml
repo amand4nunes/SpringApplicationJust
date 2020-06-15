@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06cec2bf-9533-4f67-9a1a-3305946abe30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/connection/databaseconnection/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/connection/databaseconnection/usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/conhecimento/ConhecimentoUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/conhecimento/ConhecimentoUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/interesse/InteresseUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/interesse/InteresseUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/reacoes/Reacoes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/reacoes/Reacoes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/reacoes/ReacoesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/reacoes/ReacoesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/reacoes/ReacoesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/associative/reacoes/ReacoesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/Conhecimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/Conhecimento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/ConhecimentoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/ConhecimentoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/ConhecimentoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/ConhecimentoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/knowledge/KnowSelectList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/knowledge/KnowSelectList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/stack/PilhaBusca.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/conhecimento/stack/PilhaBusca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/dto/CredenciaisDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/dto/CredenciaisDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/evento/Evento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/evento/Evento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/evento/EventoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/evento/EventoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/evento/convidado/Convidado.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/evento/convidado/Convidado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/iterators/PostBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/iterators/PostBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/posts/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/posts/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/posts/PostsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/posts/PostsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/posts/PostsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/posts/PostsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/access/UserBaseAcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/access/UserBaseAcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/captcha/CaptchaValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/captcha/CaptchaValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/jwt/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/jwt/JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/jwt/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/security/jwt/JwtService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/usuario/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/usuario/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/usuario/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/usuario/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/usuario/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/connection/databaseconnection/usuario/Usuario.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,22 +129,22 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1591888864101" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1592161087379">
+    <state width="1877" height="15" key="GridCell.Tab.0.bottom" timestamp="1592238944207">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592161087379" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1592161087379">
+    <state width="1877" height="15" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592238944207" />
+    <state width="1877" height="15" key="GridCell.Tab.0.center" timestamp="1592238944207">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592161087379" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1592161087379">
+    <state width="1877" height="15" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592238944207" />
+    <state width="1877" height="15" key="GridCell.Tab.0.left" timestamp="1592238944207">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592161087379" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1592161087379">
+    <state width="1877" height="15" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592238944207" />
+    <state width="1877" height="15" key="GridCell.Tab.0.right" timestamp="1592238944207">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592161087379" />
+    <state width="1877" height="15" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592238944207" />
     <state x="2295" y="162" key="Maven.ArtifactSearchDialog" timestamp="1591838382203">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>

@@ -26,7 +26,7 @@ public class Usuario {
     @Lob
     @Column( name = "photo")
     private String photo;
-    @Lob
+
     @Column( name = "senha")
     private String senha;
     @Column( name = "sobre")

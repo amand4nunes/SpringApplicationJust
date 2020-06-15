@@ -36,6 +36,7 @@ public class Post {
     @Column( name = "is_img")
     private Integer isImg;
 
+    @Lob
     @Column( name = "imagem")
     private String imagem;
 
