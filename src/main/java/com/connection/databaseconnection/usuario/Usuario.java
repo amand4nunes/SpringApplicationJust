@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table( name = "usuario", schema = "teste3")
+//@Table( name = "usuario", schema = "bdGrupo93a")
 public class Usuario {
 
     @Id
@@ -26,7 +26,7 @@ public class Usuario {
     @Lob
     @Column( name = "photo")
     private String photo;
-    @Lob
+
     @Column( name = "senha")
     private String senha;
     @Column( name = "sobre")
