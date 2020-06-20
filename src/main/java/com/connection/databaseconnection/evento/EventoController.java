@@ -1,6 +1,5 @@
 package com.connection.databaseconnection.evento;
 
-import com.connection.databaseconnection.evento.client.cep.Cep;
 import com.connection.databaseconnection.evento.client.cep.ClientViaCep;
 import com.connection.databaseconnection.evento.convidado.Convidado;
 import com.connection.databaseconnection.evento.convidado.ConvidadoRepository;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import static org.springframework.http.ResponseEntity.ok;
 
 @Controller
-public class EventoController {
+public class EventoController {    
     @Autowired
     private EventoRepository er;
     @Autowired
@@ -54,7 +53,7 @@ public class EventoController {
     }
 
     @GetMapping(path = "/convidado/{codigo}")
-    public ResponseEntity detalhesEvento ( @PathVariable("codigo") long codigo) {
+    public ResponseEntity detalhesEvento(@PathVariable("codigo") long codigo) {
         Evento evento = er.findByCodigo(codigo);
         Iterable<Convidado> convidados = cr.findByEvento(evento);
         if (convidados == null) {
@@ -72,8 +71,8 @@ public class EventoController {
             if(convidado.getNomeConvidado() == null){
                 System.out.println("Nome do convidado vazio");
             }
-            if(convidado.getRg() == 0){
-                System.out.println("Rg do convidado vazio");
+            if(convidado.getEmail() == null){
+                System.out.println("Email do convidado vazio");
             }
             if(convidado.getEvento() == null){
                 System.out.println("Evento não encontrado");
@@ -94,16 +93,16 @@ public class EventoController {
         return ok().build();
     }
 
-    @DeleteMapping(path = "/convidado/{rg}")
-    public ResponseEntity delete (@PathVariable String rg){
-        cr.findByRg(rg);
-        cr.deleteById(rg);
+    @DeleteMapping(path = "/convidado/{id}")
+    public ResponseEntity delete (@PathVariable String id){
+        cr.findById(id);
+        cr.deleteById(id);
         return ok().build();
 
     }
     @GetMapping("/cep/{cep}")
     public ResponseEntity consultarCep(@PathVariable String cep) {
-        Cep cepEncontrado = viaCep.getCep(cep);
+        com.connection.databaseconnection.evento.Cep cepEncontrado = viaCep.getCep(cep);
         try {
             if (cepEncontrado == null) {
                 System.out.println("cep vazio");
@@ -113,7 +112,4 @@ public class EventoController {
         }
         return ok(cepEncontrado);
     }
-
-
-
 }

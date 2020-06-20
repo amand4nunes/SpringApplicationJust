@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "post", schema="bdGrupo93a")
+@Table(name = "post", schema="teste3")
 public class Post {
 
     @Id
@@ -36,7 +36,6 @@ public class Post {
     @Column( name = "is_img")
     private Integer isImg;
 
-    @Lob
     @Column( name = "imagem")
     private String imagem;
 

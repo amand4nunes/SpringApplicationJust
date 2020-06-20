@@ -9,23 +9,25 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Builder
-@Data //( @Data )Esta notação permite que eu não precise chamar os gets e sets pois já é chamado internamente por ela
+@Data 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-//@Table(name = "convidado", schema="bdGrupo93a")
 public class Convidado {
+ 
 
     @Id
-    @Column( name = "rg")
-    private long rg;
-
-    @Column( name = "nome_convidado")
+    @GeneratedValue
+    @Column(name = "id",length = 4)
+    private Long id;
+    @Column( name = "nome_convidado",length = 45)
     private String nomeConvidado;
-
+    @Column(length =  100)
+    private String email;
     @ManyToOne
     @JoinColumn( name = "evento_codigo")
     private Evento evento;
+
 
 
 }
