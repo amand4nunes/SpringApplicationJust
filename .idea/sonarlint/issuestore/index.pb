@@ -33,3 +33,13 @@ Ksrc/main/java/com/connection/databaseconnection/usuario/UserController.java,2\
 Usrc/main/java/com/connection/databaseconnection/conhecimento/ConhecimentoService.java,8\5\8500d1ed32be229e9ee39a0cf3d60b5d0b264410
 ˆ
 Xsrc/main/java/com/connection/databaseconnection/conhecimento/ConhecimentoController.java,1\8\18b960c32bae3898540d66ec308c19fac5a39207
+
+Osrc/main/java/com/connection/databaseconnection/dto/ConhecimentoUsuarioDTO.java,c\3\c3b78ab8d00e97726980af0bc0c696495f6e3e34
+w
+Gsrc/main/java/com/connection/databaseconnection/dto/CredenciaisDTO.java,5\b\5b2b3d16262f254efe4c5fb1e705efb2bc24f846
+ˆ
+Xsrc/main/java/com/connection/databaseconnection/conhecimento/types/TipoConhecimento.java,2\b\2b7e7fea297a1bff46b9166c60c873f038dc2615
+p
+@src/main/java/com/connection/databaseconnection/dto/UserDTO.java,1\8\188f71bee15afc8d3e857a881fc788b41dbdb661
+t
+Dsrc/main/java/com/connection/databaseconnection/usuario/Usuario.java,8\8\8821ba7a35703f56eb034baa847d900e49a53229

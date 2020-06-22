@@ -1,6 +1,8 @@
 package com.connection.databaseconnection.evento.convidado;
 
+import com.connection.databaseconnection.evento.convidado.arquivoDeLayout.GravaArquivo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,5 +40,21 @@ public class ConvidadoController {
             csvWrite.write(convidado, nameMapping);
         }
         csvWrite.close();
+    }
+
+    //entregavel celia
+    @GetMapping("/export-txt")
+    public ResponseEntity gerarTxt(){
+        GravaArquivo salva = new GravaArquivo();
+        List<Convidado> listConvidado = service.listAll();
+
+        salva.montarRegistroHeader("1");
+
+        for (Convidado convidado : listConvidado) {
+            salva.montarCorpo(convidado);
+        }
+        salva.montarTrailer("1");
+        return ResponseEntity.ok().build();
+
     }
 }
