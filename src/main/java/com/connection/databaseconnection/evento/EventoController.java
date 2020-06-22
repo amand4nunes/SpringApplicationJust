@@ -3,36 +3,41 @@ package com.connection.databaseconnection.evento;
 import com.connection.databaseconnection.evento.client.cep.ClientViaCep;
 import com.connection.databaseconnection.evento.convidado.Convidado;
 import com.connection.databaseconnection.evento.convidado.ConvidadoRepository;
+import com.connection.databaseconnection.usuario.UserService;
+import com.connection.databaseconnection.usuario.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.websocket.server.PathParam;
+
 import static org.springframework.http.ResponseEntity.ok;
 
 @Controller
-public class EventoController {    
+public class EventoController {
     @Autowired
     private EventoRepository er;
     @Autowired
     private ConvidadoRepository cr;
+    @Autowired
+    private UserService us;
 
     @Autowired
     private ClientViaCep viaCep;
 
-    @PostMapping(path = "/cadastrarEvento")
-    public ResponseEntity form(@RequestBody Evento evento) {
-      try {
-          if(evento == null){
-              System.out.println("Cadastro vazio");
-
-          }
-      }catch (Exception e){
-          e.printStackTrace();
-      }
-
+    @PostMapping(path = "/cadastrarEvento/{idUsuario}")
+    public ResponseEntity form(@RequestBody Evento evento, @PathVariable("idUsuario") Integer idUsuario) {
+        try {
+            if (evento == null) {
+                System.out.println("Cadastro vazio");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        evento.setAdm(idUsuario);
         er.save(evento);
         return ok(evento);
-
     }
 
     @GetMapping(path = "/eventos")
@@ -62,44 +67,51 @@ public class EventoController {
             return ok(convidados);
         }
     }
-    @PostMapping(path = "/convidado/{codigo}")
-    public ResponseEntity cadastroConvidado( @RequestBody Convidado convidado, @PathVariable("codigo") long codigo) {
+    @PostMapping(path = "/convidado/{codigo}/{idUsuario}")
+    public ResponseEntity cadastroConvidado(@PathVariable("codigo") Integer codigo,
+                                            @PathVariable("idUsuario") Integer idUsuario) {
         Evento evento = er.findByCodigo(codigo);
-        convidado.setEvento(evento);
+        Convidado convidado = new Convidado();
 
-        try {
-            if(convidado.getNomeConvidado() == null){
-                System.out.println("Nome do convidado vazio");
-            }
-            if(convidado.getEmail() == null){
-                System.out.println("Email do convidado vazio");
-            }
-            if(convidado.getEvento() == null){
-                System.out.println("Evento não encontrado");
-            }
+        Usuario usuario =  us.buscaporId(idUsuario);
+
+        if (usuario.getId() == evento.getAdm()) {
+            return ResponseEntity.status(403).build();
+        }else {
+            convidado.setNomeConvidado(usuario.getNome());
+            convidado.setEmail(usuario.getEmail());
+            convidado.setEvento(evento);
             cr.save(convidado);
-        }catch (Exception e){
-            e.printStackTrace();
+            return ResponseEntity.ok(convidado);
         }
-        return ResponseEntity.ok(convidado);
     }
 
-    @DeleteMapping(path="/evento/{codigo}")
-    public ResponseEntity deletarEvento ( @PathVariable("codigo") long codigo){
+
+    @DeleteMapping(path = "/evento/{codigo}/{idUsuario}")
+    public ResponseEntity deletarEvento(@PathVariable("codigo") Integer codigo,
+                                        @PathVariable("idUsuario") Integer idUsuario) {
         Evento evento = er.findByCodigo(codigo);
-        Iterable<Convidado> convidados = cr.findByEvento(evento);
-        cr.deleteAll(convidados);
-        er.delete(evento);
-        return ok().build();
+        Usuario usuario =  us.buscaporId(idUsuario);
+        if (usuario.getId() == evento.getAdm()) {
+            Iterable<Convidado> convidados = cr.findByEvento(evento);
+            cr.deleteAll(convidados);
+            er.delete(evento);
+            return ok().build();
+
+        } else {
+            return ResponseEntity.status(403).build();
+        }
+
     }
 
-    @DeleteMapping(path = "/convidado/{id}")
-    public ResponseEntity delete (@PathVariable String id){
-        cr.findById(id);
-        cr.deleteById(id);
-        return ok().build();
-
-    }
+//    @DeleteMapping(path = "/convidado/{id}")
+//    public ResponseEntity delete(@PathVariable String id,
+//                                 @PathVariable("idUsuario") Integer idUsuario) {
+//        cr.findById(id);
+//        cr.deleteById(id);
+//        return ok().build();
+//
+//    }
     @GetMapping("/cep/{cep}")
     public ResponseEntity consultarCep(@PathVariable String cep) {
         com.connection.databaseconnection.evento.Cep cepEncontrado = viaCep.getCep(cep);

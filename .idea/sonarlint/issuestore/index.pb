@@ -43,3 +43,5 @@ p
 @src/main/java/com/connection/databaseconnection/dto/UserDTO.java,1\8\188f71bee15afc8d3e857a881fc788b41dbdb661
 t
 Dsrc/main/java/com/connection/databaseconnection/usuario/Usuario.java,8\8\8821ba7a35703f56eb034baa847d900e49a53229
+x
+Hsrc/main/java/com/connection/databaseconnection/usuario/UserService.java,3\1\31cea2163cf7555b0e1f18a3c94c114332cee840

@@ -46,5 +46,5 @@ public class Evento implements Serializable {
 
     @OneToMany
     private List<Convidado> convidados;
-
+    private Integer adm;
 }

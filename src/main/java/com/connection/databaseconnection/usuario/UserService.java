@@ -93,7 +93,7 @@ public class UserService {
         UserDetails userDetails = userBaseAcess.loadUserByUsername(email);
         
         if (userDetails == null) {
-            throw new ErroAutenticacao("Usuário não encontrado");
+            throw new ErroAutenticacao("Usuário não cadastrado");
         }
 
         boolean senhasBatem = encoder.matches( senha, userDetails.getPassword() );

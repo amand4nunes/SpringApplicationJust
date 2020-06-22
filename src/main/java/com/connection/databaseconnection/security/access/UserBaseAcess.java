@@ -1,5 +1,6 @@
 package com.connection.databaseconnection.security.access;
 
+import com.connection.databaseconnection.exception.ErroAutenticacao;
 import com.connection.databaseconnection.exception.SenhaInvalidaException;
 import com.connection.databaseconnection.usuario.UserRepository;
 import com.connection.databaseconnection.usuario.Usuario;
@@ -28,11 +29,11 @@ public class UserBaseAcess implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) {
 
         Usuario usuario = repository.findByEmail(email);
         if (usuario == null) {
-            throw new UsernameNotFoundException("Usuário não encontrado");
+            throw new ErroAutenticacao("Usuário não cadastrado");
         } else {
             return User
                     .builder()

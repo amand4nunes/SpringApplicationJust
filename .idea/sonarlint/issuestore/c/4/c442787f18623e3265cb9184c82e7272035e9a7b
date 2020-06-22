@@ -1,40 +1,37 @@
 
-J
-java:S37402"/Provide the parametrized type for this generic.(‘Õî‰şÿÿÿÿ
-N	java:S106H"9Replace this use of System.out or System.err by a logger.(Ñù‡
-¤
-java:S4449""ˆAnnotate the parameter with @javax.annotation.Nullable in method 'ok' declaration, or make sure that null can not be passed as argument.(¢ŠÆ§ûÿÿÿÿ
->
-java:S1148R"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Ÿ
-java:S4449q"ˆAnnotate the parameter with @javax.annotation.Nullable in method 'ok' declaration, or make sure that null can not be passed as argument.(ûù’À
-J
-java:S3740'"/Provide the parametrized type for this generic.(ş…‰åûÿÿÿÿ
-J
-java:S3740X"/Provide the parametrized type for this generic.(ñÂ©øÿÿÿÿ
-J
-java:S37408"/Provide the parametrized type for this generic.(½”æáùÿÿÿÿ
-E
-java:S3740B"/Provide the parametrized type for this generic.(ûÕ¿Ô
-J
-java:S3740"/Provide the parametrized type for this generic.(ÊâĞÁıÿÿÿÿ
-J
-java:S3740a"/Provide the parametrized type for this generic.(ŞÍùêûÿÿÿÿ
->
-java:S1148o"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-S	java:S106K"9Replace this use of System.out or System.err by a logger.(‹å»ªıÿÿÿÿ
-S	java:S106N"9Replace this use of System.out or System.err by a logger.(¿“Óöûÿÿÿÿ
-S	java:S106l"9Replace this use of System.out or System.err by a logger.(‰‰™„şÿÿÿÿ
->
-java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-E
-java:S3740h"/Provide the parametrized type for this generic.(ÇïÃ½
-S	java:S106"9Replace this use of System.out or System.err by a logger.(…ß¼ãúÿÿÿÿ
-­
-java:S4449!"ŠAnnotate the parameter with @javax.annotation.Nullable in method 'save' declaration, or make sure that null can not be passed as argument.(Â´öÄúÿÿÿÿ8ÁÇª.
-a
-java:S2583)"DChange this condition so that it does not always evaluate to "false"(Ñğ¥ô8ÁÇª.
-b
-java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(ÊâĞÁıÿÿÿÿ8ÁÇª.
 ]
-java:S4684B"@Replace this persistent entity with a simple POJO or DTO object.(ûÕ¿Ô8ÁÇª.
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(¾àÌ³8ÏÇŞà­.
+J
+java:S37407"/Provide the parametrized type for this generic.(‘Õî‰şÿÿÿÿ
+_
+java:S1128"=Remove this unused import 'javax.websocket.server.PathParam'.(ÊÊş†ûÿÿÿÿ8ÏÇŞà­.
+]	java:S125r"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ÏÇŞà­.
+[
+java:S4973N"9Use the "equals" method if value comparison was intended.(èÊ§Àûÿÿÿÿ8ÏÇŞà­.
+>
+java:S1148$"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+K
+java:S3740["/Provide the parametrized type for this generic.(Š¼•A8ÏÇŞà­.
+Ÿ
+java:S4449}"ˆAnnotate the parameter with @javax.annotation.Nullable in method 'ok' declaration, or make sure that null can not be passed as argument.(ûù’À
+a
+java:S2259&"DA "NullPointerException" could be thrown; "evento" is nullable here.(Æñµ8ÏÇŞà­.
+a
+java:S2583."DChange this condition so that it does not always evaluate to "false"(Ñğ¥ô8ÁÇª.
+]	java:S125m"<This block of commented-out lines of code should be removed.(è½Å˜ùÿÿÿÿ8ÏÇŞà­.
+[
+java:S4973_"9Use the "equals" method if value comparison was intended.(èÊ§Àûÿÿÿÿ8ÏÇŞà­.
+L
+java:S3740"/Provide the parametrized type for this generic.(¾àÌ³8ÎÇŞà­.
+>
+java:S1148{"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+J
+java:S3740,"/Provide the parametrized type for this generic.(ş…‰åûÿÿÿÿ
+E
+java:S3740t"/Provide the parametrized type for this generic.(ÇïÃ½
+L
+java:S3740G"/Provide the parametrized type for this generic.(‹ÓøŒ8ÏÇŞà­.
+S	java:S106x"9Replace this use of System.out or System.err by a logger.(‰‰™„şÿÿÿÿ
+J
+java:S3740="/Provide the parametrized type for this generic.(½”æáùÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(…ß¼ãúÿÿÿÿ
