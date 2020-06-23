@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -121,14 +122,17 @@ public class UserService {
 
         List<Conhecimento> busca = conhecimentoRepository.findByKnow(conhecimento);
 
-        List<ConhecimentoUsuario> novaBusca;
+        List<ConhecimentoUsuario> novaBusca = new ArrayList<>();
 
         if(busca.isEmpty()) {
             return null;
         }
         else {
-            novaBusca = conhecimentoUsuarioRepository
-                    .findByIdKnowId(busca.get(0).getId_conhecimento());
+            for(int i = 0; i < busca.size(); i++ ) {
+
+                novaBusca.addAll(conhecimentoUsuarioRepository
+                        .findByIdKnowId(busca.get(i).getId_conhecimento()));
+            }
         }
 
         if(novaBusca.isEmpty()) {

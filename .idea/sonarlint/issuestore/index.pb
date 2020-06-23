@@ -45,3 +45,9 @@ t
 Dsrc/main/java/com/connection/databaseconnection/usuario/Usuario.java,8\8\8821ba7a35703f56eb034baa847d900e49a53229
 x
 Hsrc/main/java/com/connection/databaseconnection/usuario/UserService.java,3\1\31cea2163cf7555b0e1f18a3c94c114332cee840
+‚
+Rsrc/main/java/com/connection/databaseconnection/security/access/UserBaseAcess.java,1\4\145392790cb82b7dfe542911efb286e439ba29ae
+ˆ
+Xsrc/main/java/com/connection/databaseconnection/conhecimento/ConhecimentoRepository.java,5\6\56b83c2a164a50efc7827da5ca6d1983fb20ca2c
+›
+ksrc/main/java/com/connection/databaseconnection/associative/conhecimento/ConhecimentoUsuarioRepository.java,8\a\8a45c89c08b57d622513547bc1c1237abe412286

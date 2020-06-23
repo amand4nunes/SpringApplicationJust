@@ -1,8 +1,6 @@
 package com.connection.databaseconnection.associative.conhecimento;
 
-import com.connection.databaseconnection.conhecimento.Conhecimento;
 import com.connection.databaseconnection.conhecimento.types.TipoConhecimento;
-import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -31,7 +29,7 @@ public interface ConhecimentoUsuarioRepository extends JpaRepository<Conheciment
     List<ConhecimentoUsuario> findByConhecimentoandLevel(Integer nivel, String con);
 
     @Query(" select c from ConhecimentoUsuario c left join fetch c.usuario u" +
-            "left join fetch c.conhecimento uk where c.nivel = ?1 and uk.tipo" +
+            "left join fetch c.conhecimento uk where c.nivel >= ?1 and uk.tipo" +
             " = ?2")
     List<ConhecimentoUsuario> findByLevelandType(int level, TipoConhecimento tipo);
 }

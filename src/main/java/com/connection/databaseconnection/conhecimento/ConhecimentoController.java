@@ -39,7 +39,7 @@ public class ConhecimentoController {
     @Autowired
     private BuscaBuilder buscaBuilder;
 
-    PilhaBusca<TipoConhecimento> buscas = new PilhaBusca<TipoConhecimento>(5);
+    PilhaBusca<TipoConhecimento> buscas = new PilhaBusca<TipoConhecimento>(20);
 
     @PostMapping("/adicionar/conhecimento")
     public ResponseEntity novoConhecimento(@RequestBody ConhecimentoUsuario conhecimentoUsuario) {
@@ -240,7 +240,7 @@ public class ConhecimentoController {
 
 
                     if (conhecimentos == null) {
-                        return new ResponseEntity("Infelizmente ainda não temos usuários que" +
+                        return new ResponseEntity("Infelizmente ainda não temos usuários que " +
                                 "possuem este nível de conhecimento .",HttpStatus.NOT_FOUND);
                     } else {
 
@@ -257,7 +257,7 @@ public class ConhecimentoController {
 
                     if (conhecimentos == null) {
                         return new ResponseEntity("Infelizmente ainda não temos usuários que possuem este nível" +
-                                "de conhecimento ."
+                                " de conhecimento ."
                                 , HttpStatus.NOT_FOUND);
                     } else {
                         buscas.push(conhecimentos.get(0).getConhecimento().getTipo());
