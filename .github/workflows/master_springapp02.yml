@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - springapp02
+name: Build and deploy JAR app to Azure Web App - springapp02
 
 on:
   push:
@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'springapp02'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2bb01cd2dd6f49909542fd415eff9fe2 }}
-        package: '${{ github.workspace }}/target/*.war'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_25732ca384944b6b9641cc21434c8aa2 }}
+        package: '${{ github.workspace }}/target/*.jar'
