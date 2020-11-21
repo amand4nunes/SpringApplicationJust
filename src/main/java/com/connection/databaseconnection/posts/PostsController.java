@@ -76,4 +76,21 @@ public class PostsController {
         }
 
     }
+
+    @GetMapping("/load/all")
+
+    public ResponseEntity loadPostsMobile() {
+
+        try{
+            List<PostModel> lista =  controller.loadAll();
+            if (lista == null) {
+                return new ResponseEntity("A lista está vazia", HttpStatus.ACCEPTED);
+            }
+            return new ResponseEntity(lista, HttpStatus.OK);
+        }catch (ErroConexao e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
+    }
+
 }

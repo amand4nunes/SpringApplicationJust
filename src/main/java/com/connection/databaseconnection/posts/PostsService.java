@@ -32,6 +32,8 @@ public class PostsService {
 
     private Long rangeAtual;
 
+    private Long rangeAtualMobile;
+
     private Integer last;
 
     boolean first;
@@ -50,6 +52,7 @@ public class PostsService {
                 .getResultList();
 
         rangeAtual = count.get(0);
+        rangeAtualMobile = count.get(0);
 
         if (rangeAtual <1) {
             return false;
@@ -111,7 +114,7 @@ public class PostsService {
 //                            .setParameter("post", (long)only_id.get(0))
 //                            .getResultList();
 
-                            List<Long> allReact = entityManager.createQuery(
+                    List<Long> allReact = entityManager.createQuery(
                             "select count(*) from Reacoes r where r.id_post = :post")
                             .setParameter("post", (long)only_id.get(0))
                             .getResultList();
@@ -193,6 +196,72 @@ public class PostsService {
         return resultFinal;
 
     }
+
+    @Transactional
+    List<PostModel> loadAll() {
+
+        List<Object[]> result;
+        List<PostModel> resultFinal = new ArrayList<>();
+        List<Integer> only_id;
+        Integer interessante, gratidao, inovador, all;
+
+        while (resultFinal.size() < rangeAtualMobile) {
+
+                    result = entityManager.createQuery(
+                            "select p.id, p.conteudo, u.nome, p._data, p.isImg, p.imagem, u.photo, u.id from Post p inner join" +
+                                    " p.usuario as u where p.id <= :range order by p.id desc ")
+                            .setParameter("range", last)
+                            .setMaxResults(1)
+                            .getResultList();
+
+                    only_id = entityManager.createQuery(
+                            "select p.id from Post p where p.id <= :range order by p.id desc ")
+                            .setParameter("range", last)
+                            .setMaxResults(1)
+                            .getResultList();
+
+                    Integer reacao = reacoesService.validarReacao(
+                            (long) userController.getCurrentUser().getId(), (long)only_id.get(0));
+
+//                    List<Long> one = entityManager.createQuery(
+//                            "select count(*) from Reacoes r where r.id_post = :post and r.tipo = 1 ")
+//                            .setParameter("post", (long)only_id.get(0))
+//                            .getResultList();
+//
+//                    List<Long> two = entityManager.createQuery(
+//                            "select count(*) from Reacoes r where r.id_post = :post and r.tipo = 2 ")
+//                            .setParameter("post", (long)only_id.get(0))
+//                            .getResultList();
+//
+//                    List<Long> three = entityManager.createQuery(
+//                            "select count(*) from Reacoes r where r.id_post = :post and r.tipo = 3 ")
+//                            .setParameter("post", (long)only_id.get(0))
+//                            .getResultList();
+
+                            List<Long> allReact = entityManager.createQuery(
+                            "select count(*) from Reacoes r where r.id_post = :post")
+                            .setParameter("post", (long)only_id.get(0))
+                            .getResultList();
+
+
+//                    interessante = Math.toIntExact(one.get(0));
+//
+//                    gratidao = Math.toIntExact(two.get(0));
+//
+//                    inovador = Math.toIntExact(three.get(0));
+
+                    all = Math.toIntExact(allReact.get(0));
+
+                    resultFinal.add(dataBuilder(result, reacao, all));
+
+
+        }
+
+        return resultFinal;
+
+    }
+
+
         public PostModel dataBuilder (List < Object[]>lista, Integer reacao, Integer all){
 
             PostModel result;
