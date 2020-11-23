@@ -88,7 +88,7 @@ public class EventoController {
 
 
     @DeleteMapping(path = "/evento/{codigo}/{idUsuario}")
-    public ResponseEntity deletarEvento(@PathVariable("codigo") Integer codigo,
+    public ResponseEntity deletarEvento(@PathVariable("codigo") Long codigo,
                                         @PathVariable("idUsuario") Integer idUsuario) {
         Evento evento = er.findByCodigo(codigo);
         Usuario usuario =  us.buscaporId(idUsuario);
